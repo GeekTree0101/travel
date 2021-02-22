@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.shawn.mltravel.mapper.UserMapper">
+
+    <select id="queryUserList" resultType="User">
+        select * from travel.user
+    </select>
+
+    <insert id="addUser" parameterType="User">
+        insert into travel.user (id,username,password,address,email,phone) values(#{id},#{username},#{password},#{address},#{email},#{phone})
+    </insert>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from travel.user where id = #{id}
+    </delete>
+    
+    <update id="updateUser" parameterType="User">
+        update user set username=#{username},password=#{password},address=#{address},email=#{email},phone=#{phone}
+    </update>
+    
+    <select id="queryUserById" resultType="User">
+        select * from travel.user where id = #{id}
+    </select>
+</mapper>
