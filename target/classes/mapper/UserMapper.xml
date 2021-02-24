@@ -18,7 +18,7 @@
     </delete>
     
     <update id="updateUser" parameterType="User">
-        update user set username=#{username},password=#{password},address=#{address},email=#{email},phone=#{phone}
+        update user set username=#{username},password=#{password},address=#{address}
     </update>
     
     <select id="queryUserById" resultType="User">

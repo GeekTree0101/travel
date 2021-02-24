@@ -28,3 +28,8 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+    #开启驼峰命名转换
+    mybatis:
+      configuration:
+        map-underscore-to-camel-case: true
